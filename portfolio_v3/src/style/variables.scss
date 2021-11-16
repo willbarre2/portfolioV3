@@ -1,6 +1,18 @@
+@font-face {
+    font-family: "England";
+    src: url("~@/assets/fonts/England/England_Signature.ttf");
+}
 
-$black:#32404e;
+$black:#0b0e11;
+$blueCD: #0e2a5a;
+$blueC: #296b85;
+$sky: #abc2e1;
+$roseC: #fdc1a9;
+$roseCD: #f1928e;
+$purpleC: #674d7d;
+$green: #42b983;
 
+$xxl: "only screen and (max-width: 1400px)";
 $xl: "only screen and (max-width: 1200px)";
 $lg: "only screen and (max-width: 992px)";
 $md: "only screen and (max-width: 768px)";
@@ -28,6 +40,7 @@ $scale: scale(1.12);
 }
 
 %hover{
+    @extend %animate;
     &:hover{
         cursor: pointer;
         transform: $scale;
