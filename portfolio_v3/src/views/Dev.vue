@@ -1,15 +1,16 @@
 <template>
+  <Title />
   
 </template>
 
 <script>
 // @ is an alias to /src
-// import ContentHome from '@/components/ContentHome.vue'
+import Title from '@/components/Title.vue'
 
 export default {
   name: 'Home',
   components: {
-    
+    Title
   }
 }
 </script>

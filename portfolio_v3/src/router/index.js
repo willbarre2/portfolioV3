@@ -5,22 +5,26 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    component: Home
+    component: Home,
+    meta: { transition: 'slide-left' },
   },
   {
     path: '/dev',
     name: 'Dev',
-    component: () => import( '../views/Dev.vue')
+    component: () => import( '../views/Dev.vue'),
+    meta: { transition: 'slide-left' },
   },
   {
     path: '/cv',
     name: 'CV',
-    component: () => import( '../views/CV.vue')
+    component: () => import( '../views/CV.vue'),
+    meta: { transition: 'slide-left' },
   },
   {
     path: '/contact',
     name: 'Contact',
-    component: () => import( '../views/Contact.vue')
+    component: () => import( '../views/Contact.vue'),
+    meta: { transition: 'slide-left' },
   }
 ]
 
