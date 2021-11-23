@@ -21,6 +21,12 @@ export default {
   components: {
     Navbar,
   },
+  mounted(){
+    //empèche le scroll
+    // window.addEventListener("scroll", function (e){
+    //   window.scrollTo(0,0);
+    // }, false);
+  }
 }
 
 </script>

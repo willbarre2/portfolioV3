@@ -37,9 +37,32 @@ h1{
 @media #{$xxl}{
   h1{
     font-size: 4rem;
+    top: 1rem;
 
     span{
       font-size: 2rem;
+    }
+  }
+}
+
+@media #{$sm}{
+  h1{
+    font-size: 3rem;
+    top: 1rem;
+
+    span{
+      font-size: 1.5rem;
+    }
+  }
+}
+
+@media #{$xxs}{
+  h1{
+    font-size: 2rem;
+    top: 1.5rem;
+
+    span{
+      font-size: 1rem;
     }
   }
 }
