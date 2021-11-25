@@ -1,7 +1,10 @@
 <template>
-  <Title />
-  <div id="cont-CV">
-    <img src="../assets/img/CV_web3.png" alt="CV" id="cv">
+  <div>
+    <Title />
+    <div id="cont-CV">
+      <a :href="`${publicPath}CV_web3.pdf`" id="textCV">Téléchargez le ici<fa :icon="['fas', 'file-download']"/></a>
+      <img src="../assets/img/CV_web3.png" alt="CV" id="cv">
+    </div>
   </div>
 </template>
 
@@ -13,6 +16,11 @@ export default {
   name: 'Home',
   components: {
     Title
+  },
+  data () {
+    return {
+      publicPath: process.env.BASE_URL
+    }
   },
   mounted(){
     const navBar = document.getElementById("nav")
@@ -28,15 +36,60 @@ export default {
 @import "../style/style.module.scss";
 
 #cont-CV{
-  width: 90vw;
-  height: 85vh;
-  margin: auto;
+  width: 600px;
+  height: 800px;
+  margin:  0 auto;
   @extend %shadowL;
   @extend %glass;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+
+  #textCV{
+    color: $blueCD;
+    font-weight: bold;
+    font-size: 1.2rem;
+    @extend %hover;
+    &:hover{
+      color: $blueC;
+    }
+
+    svg{
+      margin-left: .5rem;
+    }
+  }
 
   #cv{
-    width: 500px;
+    height: 85%;
   }
 }
 
+@media #{$md}{
+  #cont-CV{
+    width: 500px;
+    height: 600px;
+  }
+}
+
+@media #{$sm}{
+  #cont-CV{
+    width: 400px;
+    height: 500px;
+  }
+}
+
+@media #{$xs}{
+  #cont-CV{
+    width: 310px;
+    height: 450px;
+  }
+}
+
+@media #{$xxs}{
+  #cont-CV{
+    width: 275px;
+    height: 400px;
+  }
+}
 </style>
