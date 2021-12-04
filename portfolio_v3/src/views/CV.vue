@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="wrapper-CV">
     <Title />
     <div id="cont-CV">
       <a :href="`${publicPath}CV_web3.pdf`" id="textCV">Téléchargez le ici<fa :icon="['fas', 'file-download']"/></a>
@@ -35,6 +35,14 @@ export default {
 <style lang="scss" scoped>
 @import "../style/style.module.scss";
 
+#wrapper-CV{
+  width: 100%;
+  height: calc(100vh - 120px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 #cont-CV{
   width: 600px;
   height: 800px;
@@ -48,8 +56,8 @@ export default {
 
   #textCV{
     color: $blueCD;
-    font-weight: bold;
-    font-size: 1.2rem;
+    font-family: "Jose", Avenir, Helvetica, Arial, sans-serif;
+    font-size: 1.3rem;
     @extend %hover;
     &:hover{
       color: $blueC;
@@ -66,6 +74,10 @@ export default {
 }
 
 @media #{$md}{
+
+  #wrapper-CV{
+    height: calc(100vh - 120px);
+  }
   #cont-CV{
     width: 500px;
     height: 600px;
@@ -80,6 +92,9 @@ export default {
 }
 
 @media #{$xs}{
+  #wrapper-CV{
+    align-items: start;
+  }
   #cont-CV{
     width: 310px;
     height: 450px;
@@ -87,6 +102,7 @@ export default {
 }
 
 @media #{$xxs}{
+  
   #cont-CV{
     width: 275px;
     height: 400px;

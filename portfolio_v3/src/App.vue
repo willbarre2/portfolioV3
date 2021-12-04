@@ -3,7 +3,6 @@
     <Navbar />
 
     <router-view v-slot="{ Component, route }">
-      <!-- Use any custom transition and fallback to `fade` -->
       <transition :name="route.meta.transition || 'fade'">
         <component :is="Component" :key="$route.path"/>
       </transition>
@@ -40,6 +39,23 @@ export default {
 
 .slide-left-enter-from, .slide-left-leave-to {
   transform: translateX(-30%);
+  opacity: 0;
+}
+
+.slide-right-enter-active, .slide-right-leave-active {
+  transition: all .5s ease-in;
+}
+
+.slide-right-enter-from, .slide-right-leave-to {
+  transform: translateX(30%);
+  opacity: 0;
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: all .5s ease-in-out;
+}
+
+.fade-enter-from, .fade-leave-to {
   opacity: 0;
 }
 

@@ -20,7 +20,6 @@ export default {
 
     navBar.classList.remove("isOpen");
     btnBurger.classList.remove("is-opened");
-
   }
 }
 </script>

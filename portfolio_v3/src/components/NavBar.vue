@@ -1,7 +1,7 @@
 <template>
   <nav id="nav">
     <router-link to="/">Home</router-link>
-    <router-link to="/dev">Dev Web</router-link>
+    <router-link to="/dev">DevWeb</router-link>
     <router-link to="/cv">CV</router-link>
     <router-link to="/contact">Contact</router-link>
   </nav>
@@ -47,6 +47,7 @@ export default{
     margin: 2.75rem 3rem;
     padding: .25rem 0;
     font-size: 1.3rem;
+    font-family: "JoseB", Avenir, Helvetica, Arial, sans-serif;
     color: $black;
     @extend %hover;
 
@@ -170,6 +171,14 @@ export default{
 #rectify-navbar{
   width: 100%;
   height: 0;
+}
+
+@media #{$xxl}{
+  #nav{
+    a{
+      margin: 2.75rem 2.5rem;
+    }
+  }
 }
 
 @media #{$xl}{

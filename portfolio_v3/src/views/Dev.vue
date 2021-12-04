@@ -13,11 +13,6 @@ export default {
     Title
   },
   mounted(){
-    const navBar = document.getElementById("nav")
-    const btnBurger = document.getElementById("cont-btn-burger")
-
-    navBar.classList.remove("isOpen");
-    btnBurger.classList.remove("is-opened");
   }
 }
 </script>

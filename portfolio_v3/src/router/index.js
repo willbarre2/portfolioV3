@@ -18,7 +18,7 @@ const routes = [
     path: '/cv',
     name: 'CV',
     component: () => import( '../views/CV.vue'),
-    meta: { transition: 'slide-left' },
+    meta: { transition: 'slide-right' },
   },
   {
     path: '/contact',
