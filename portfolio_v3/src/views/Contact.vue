@@ -98,7 +98,17 @@ export default {
   },
   methods: {
     submitMsg(){
-      console.log("msg envoyé");
+      const axios = require('axios').default;
+      axios
+      .post(`../mail.php`, {nom: this.form.lastname, prenom: this.form.firstname, mail: this.form.mail, sujet: this.form.subject, msg: this.form.msg})
+      .then((response) => {
+        if(response){
+          window.alert("J'ai reçus votre message. Merci");
+        }else{
+          window.alert("Erreur lors de l'envoie de votre message");;
+        }
+      })
+      .catch((error) => console.log(error));
     }
   }
 }
@@ -142,6 +152,9 @@ export default {
       width: 400px;
       color: $blueCD;
     }
+    input.inputerror:focus { 
+        outline-color: $red;   
+    }
 
     span{
       display: none;
@@ -150,11 +163,11 @@ export default {
       left: 18rem;
     }
 
-  .errormsg{
+    .errormsg{
       display: block;
       color: $red;
       font-size: .8rem;
-  }
+    }
 
     textarea{
       height: 175px

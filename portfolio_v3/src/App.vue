@@ -34,7 +34,7 @@ export default {
 @import "./style/style.module.scss";
 
 .slide-left-enter-active, .slide-left-leave-active {
-  transition: all .5s ease-in;
+  transition: all .5s ease-in-out;
 }
 
 .slide-left-enter-from, .slide-left-leave-to {
@@ -43,7 +43,7 @@ export default {
 }
 
 .slide-right-enter-active, .slide-right-leave-active {
-  transition: all .5s ease-in;
+  transition: all .5s ease-in-out;
 }
 
 .slide-right-enter-from, .slide-right-leave-to {
