@@ -9,6 +9,11 @@
 }
 
 @font-face {
+    font-family: "JoseI";
+    src: url("~@/assets/fonts/JosefinSans/JosefinSans-Italic.ttf");
+}
+
+@font-face {
     font-family: "JoseB";
     src: url("~@/assets/fonts/JosefinSans/JosefinSans-SemiBold.ttf");
 }
@@ -33,6 +38,7 @@ $roseCD: #f1928e;
 $purpleC: #674d7d;
 $green: #42b983;
 $red: #c71515;
+$redL: #da3737;
 
 $border-blue: #57b9e0 #296b85 #296b85  #57b9e0;
 $border-pink: #ffbdbb #f1928e #f1928e #ffbdbb;

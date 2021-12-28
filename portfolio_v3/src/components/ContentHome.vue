@@ -28,7 +28,7 @@ h1{
 }
 
 #text-home{
-  font-family: "Jose", Avenir, Helvetica, Arial, sans-serif;
+  font-family: "JoseI", Avenir, Helvetica, Arial, sans-serif;
   color: $skyT;
   font-size: 1.2rem;
   margin: 3rem 0 0 6rem;
