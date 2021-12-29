@@ -13,7 +13,7 @@
 import Title from '@/components/Title.vue'
 
 export default {
-  name: 'Home',
+  name: 'CV',
   components: {
     Title
   },

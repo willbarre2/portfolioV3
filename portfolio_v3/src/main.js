@@ -1,12 +1,12 @@
-import { createApp } from 'vue'
+import { createApp } from 'vue/dist/vue.esm-bundler'
 import App from './App.vue'
 import router from './router'
 import store from './store'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fas } from '@fortawesome/free-solid-svg-icons'
-import Flicking from "@egjs/vue3-flicking/dist/flicking.esm";
-import "@egjs/vue3-flicking/dist/flicking.css";
+import VueCarousel from '@chenfengyuan/vue-carousel'
+
 
 library.add(fas)
 
@@ -14,5 +14,5 @@ createApp(App)
     .use(store)
     .use(router)
     .component('fa', FontAwesomeIcon)
-    .component("Flicking", Flicking)
+    .component(VueCarousel.name, VueCarousel)
     .mount('#app')
