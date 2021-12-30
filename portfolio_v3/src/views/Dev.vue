@@ -58,8 +58,6 @@ export default {
     @extend %glass;
 
     #slider{
-      width: 92%;
-      height: 100%;
       border-radius: 15px;
       -webkit-border-radius: 15px;
       -moz-border-radius: 15px;
@@ -68,7 +66,7 @@ export default {
       overflow: hidden;
       margin: 3rem 3rem 2rem;
       height: calc(100% - 5rem);
-
+      
       .vue-carousel__indicator{
         margin-right: .4rem;
         margin-left: .4rem;
@@ -77,11 +75,13 @@ export default {
       .vue-carousel__indicators--disc>.vue-carousel__indicator:before{
         height: .8rem;
         width: .8rem;
+        background-color: $roseC;
       }
 
       .vue-carousel__control{
         width: 3rem;
         height: 3rem;
+        background-color: $blueC;
       }
 
       .vue-carousel--controls>.vue-carousel__control--prev{
@@ -105,6 +105,7 @@ export default {
       }
 
       .circle-info{
+        overflow: hidden;
         box-shadow: none;
         position: absolute;
         top: 0;
@@ -116,7 +117,7 @@ export default {
         -ms-border-radius: 15px;
         -o-border-radius: 15px;
         background-color: $redL;
-        clip-path: circle(5% at 95% 10%);
+        clip-path: circle(4% at 95% 10%);
         transition: all 1s ease-in-out;
         -webkit-transition: all 1s ease-in-out;
         -moz-transition: all 1s ease-in-out;
@@ -142,25 +143,52 @@ export default {
       #PLM{
         height: 657px;
         background-image: url(../assets/img/dev_web/PLM.png);
+        background-repeat: no-repeat;
+        background-position: top;
       }
 
       #OnlineBIO{
         height: 657px;
         background-image: url(../assets/img/dev_web/Online_BIO.png);
+        background-repeat: no-repeat;
+        background-position: top;
       }
 
       #Archlabs{
         height: 657px;
         background-image: url(../assets/img/dev_web/ArchWeb.png);
+        background-repeat: no-repeat;
+        background-position: top;
       }
 
       #Tinker{
         height: 657px;
         background-image: url(../assets/img/dev_web/TinkerWeb.png);
+        background-repeat: no-repeat;
+        background-position: top;
       }
     }
   }
 
+}
+
+@media #{$xl}{
+  #wrapper-dev{
+    #cont-dev{
+      width: 95%;
+
+      #slider{
+        .circle-info{
+          clip-path: circle(30px at 90% 10%);
+          svg{
+            font-size: 1.5rem;
+            top: 8.3%;
+            left: 89.6%;
+          }
+        }
+      }
+    }
+  }
 }
 
 @media #{$md}{
@@ -173,9 +201,123 @@ export default {
       #slider{
         margin: 1rem;
         height: calc(100% - 2rem);
+
+        .vue-carousel__indicator{
+          margin-right: .2rem;
+          margin-bottom: 0;
+          margin-left: .2rem;
+        }
+
+        .vue-carousel__indicators--disc>.vue-carousel__indicator:before{
+          height: .6rem;
+          width: .6rem;
+          background-color: $blueCD;
+        }
+
+        #PLM{
+          height: 850px;
+          background-image: url(../assets/img/dev_web/PLMmd.png);
+        }
+
+        #OnlineBIO{
+          height: 850px;
+          background-image: url(../assets/img/dev_web/Online_BIOmd.png);
+        }
+
+        #Archlabs{
+          height: 850px;
+          background-image: url(../assets/img/dev_web/ArchWebmd.png);
+        }
+
+        #Tinker{
+          height: 850px;
+          background-image: url(../assets/img/dev_web/TinkerWebmd.png);
+        }
+
+        .circle-info{
+          clip-path: circle(25px at 85% 10%);
+          svg{
+            font-size: 1.2rem;
+            top: 8.9%;
+            left: 84.7%;
+          }
+        }
       }
     }
   }
 }
 
+@media #{$sm}{
+  #wrapper-dev{
+    #cont-dev{
+      #slider{
+
+        #PLM{
+          height: 648px;
+          background-image: url(../assets/img/dev_web/PLMsm.png);
+        }
+
+        #OnlineBIO{
+          height: 648px;
+          background-image: url(../assets/img/dev_web/Online_BIOsm.png);
+        }
+
+        #Archlabs{
+          height: 648px;
+          background-image: url(../assets/img/dev_web/ArchWebsm.png);
+        }
+
+        #Tinker{
+          height: 648px;
+          background-image: url(../assets/img/dev_web/TinkerWebsm.png);
+        }
+
+        .circle-info{
+          clip-path: circle(25px at 85% 10%);
+          svg{
+            font-size: 1.2rem;
+            top: 8.7%;
+            left: 84.5%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media #{$xs}{
+  #wrapper-dev{
+    #cont-dev{
+      #slider{
+
+        #PLM{
+          height: 600px;
+          background-image: url(../assets/img/dev_web/PLMxs.png);
+        }
+
+        #OnlineBIO{
+          height: 600px;
+          background-image: url(../assets/img/dev_web/Online_BIOxs.png);
+        }
+
+        #Archlabs{
+          height: 600px;
+          background-image: url(../assets/img/dev_web/ArchWebxs.png);
+        }
+
+        #Tinker{
+          height: 600px;
+          background-image: url(../assets/img/dev_web/TinkerWebxs.png);
+        }
+
+        .circle-info{
+          svg{
+            top: 8.5%;
+            left: 83.7%;
+          }
+        }
+      }
+    }
+  }
+}
 </style>
