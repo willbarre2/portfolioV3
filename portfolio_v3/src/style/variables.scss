@@ -40,8 +40,8 @@ $green: #42b983;
 $red: #c71515;
 $redL: #da3737;
 
-$border-blue: #57b9e0 #296b85 #296b85  #57b9e0;
-$border-pink: #ffbdbb #f1928e #f1928e #ffbdbb;
+$border-blue: #57b9e0 #164c61 #164c61  #57b9e0;
+$border-pink: #ffbdbb #e27d79 #e27d79 #ffbdbb;
 
 $xxl: "only screen and (max-width: 1400px)";
 $xl: "only screen and (max-width: 1200px)";
@@ -170,7 +170,7 @@ $scale: scale(1.1);
     border-style: solid;
     border-color: $border-blue;
     color: $blueCD;
-    width: 150px;
+    padding: 0.8rem 1.5rem;
     margin: 1rem auto 0;
     &:hover{
         color: $purpleC;
