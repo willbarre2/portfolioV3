@@ -2,7 +2,7 @@
   <div id="wrapper-CV">
     <Title />
     <div id="cont-CV">
-      <a :href="`${publicPath}CV_web3.pdf`" id="textCV">Téléchargez le ici<fa :icon="['fas', 'file-download']"/></a>
+      <a :href="`${publicPath}CV_web3small.pdf`" target="_blank" id="textCV">Téléchargez le ici<fa :icon="['fas', 'file-download']"/></a>
       <img src="../assets/img/CV_web3.png" alt="CV" id="cv">
     </div>
   </div>

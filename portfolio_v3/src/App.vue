@@ -66,7 +66,7 @@ export default {
   background-size: cover;
   background-position: center;
   position: absolute;
-  z-index: -1;
+  z-index: -2;
   bottom: 0;
   mix-blend-mode: overlay;
   opacity: .6;

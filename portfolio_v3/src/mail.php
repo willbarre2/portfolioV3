@@ -9,9 +9,9 @@ $toEmail = "willbarre9@gmail.com";
 $mailHeaders = "From: " . $firstname . " " . $lastname . "<" . $email . ">\r\n";
 
 if(mail($toEmail, $subject, $message, $mailHeaders)){
-    $response = true;
+    $response = TRUE;
 }else{
-    $response = false;
+    $response = FALSE;
 }
 
 header('Content-Type: application/json');

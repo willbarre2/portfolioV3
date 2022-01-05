@@ -1,5 +1,5 @@
 <template>
-    <h1>William-Barré<span> .com</span></h1>
+    <h1>William-Barré<span> .fr</span></h1>
   
 </template>
 

@@ -99,14 +99,26 @@ export default {
   methods: {
     submitMsg(){
       const axios = require('axios').default;
+      var data = new FormData();
+      data.append('nom', this.form.lastname);
+      data.append('prenom', this.form.firstname);
+      data.append('mail', this.form.mail);
+      data.append('sujet', this.form.subject);
+      data.append('msg', this.form.msg);
       axios
-      .post(`../mail.php`, {nom: this.form.lastname, prenom: this.form.firstname, mail: this.form.mail, sujet: this.form.subject, msg: this.form.msg})
+      .post(`../mail.php`, data)
       .then((response) => {
         if(response){
           window.alert("J'ai reçus votre message. Merci");
+          
         }else{
           window.alert("Erreur lors de l'envoie de votre message");;
         }
+        this.form.lastname = "";
+        this.form.firstname = "";
+        this.form.mail = "";
+        this.form.subject = "";
+        this.form.msg = "";
       })
       .catch((error) => console.log(error));
     }
@@ -131,6 +143,7 @@ export default {
   margin:  0 auto;
   @extend %shadowL;
   @extend %glass;
+  position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -159,8 +172,7 @@ export default {
     span{
       display: none;
       position: absolute;
-      top: 16.4rem;
-      left: 18rem;
+      transform: translate(11.5rem, 1.8rem);
     }
 
     .errormsg{
@@ -210,7 +222,7 @@ export default {
       }
 
       span{
-        left: 13rem;
+        transform: translate(8.5rem, 1.8rem);
       }
     }
   }
@@ -228,8 +240,7 @@ export default {
       width: 90%;
 
       span{
-        top: 15.6rem;
-        left: 9.5rem;
+        transform: translate(8.5rem, 1.7rem);
       }
     }
   }
@@ -250,8 +261,7 @@ export default {
         font-size: 1rem;
       }
       span{
-        top: 8.9rem;
-        left: 7.5rem;
+        transform: translate(6.1rem, 1.45rem);
       }
     }
 
@@ -285,8 +295,7 @@ export default {
       }
 
       span{
-        top: 10.9rem;
-        left: 1.5rem;
+        transform: translate(0, 3.2rem);
       }
     }
 
@@ -319,8 +328,6 @@ export default {
     div{
       span{
         font-size: .7rem !important;
-        top: 9.8rem;
-        left: 1.5rem;
       }
     }
   }

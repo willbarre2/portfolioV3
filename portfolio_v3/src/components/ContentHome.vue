@@ -1,13 +1,25 @@
 <template>
-  <h1>William-Barré<span> .com</span></h1>
+  <h1>William-Barré<span> .fr</span></h1>
   <div id="text-home">
     <p>" Choisissez un travail que vous aimez</p>
     <p> et vous n'aurez pas à travailler un seul jour de votre vie. "</p>
     <span>Confucius</span>
   </div>
+  <div class="zepline" id="zep"></div>
 </template>
 
 <script>
+
+export default {
+  mounted(){
+    const zepline = document.getElementById("zep")
+
+    setTimeout(() => {
+      zepline.classList.add("anim");
+    }, 200)
+    
+  }
+}
 
 </script>
 
@@ -21,6 +33,7 @@ h1{
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: $blueCD;
+  mix-blend-mode: luminosity;
 
   span{
     font-size: 6rem;
@@ -46,9 +59,24 @@ h1{
   }
 }
 
-#laptop{
-  width: 480px;
-  height: 270px;
+.zepline{
+  background-image: url(../assets/img/balloon.png);
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  z-index: -1;
+  width: 300px;
+  height: 300px;
+  transform: translate(-370%, 3rem);
+  transition: all 20s linear;
+  -webkit-transition: all 20s linear;
+  -moz-transition: all 20s linear;
+  -ms-transition: all 20s linear;
+  -o-transition: all 20s linear;
+}
+
+.anim{
+  transform: translate(370%, -12rem);
 }
 
 @media #{$xxl}{
@@ -70,6 +98,24 @@ h1{
       margin-top: .8rem;
       font-size: .8rem;
     }
+  }
+
+  .zepline{
+    transform: translate(-300%, 3rem);
+  }
+
+  .anim{
+    transform: translate(300%, -9rem);
+  }
+}
+
+@media #{$xl}{
+  .zepline{
+    transform: translate(-250%, 3rem);
+  }
+
+  .anim{
+    transform: translate(250%, -9rem);
   }
 }
 
@@ -93,6 +139,14 @@ h1{
       margin-top: .8rem;
       font-size: .7rem;
     }
+  }
+
+  .zepline{
+    transform: translate(-200%, 3rem);
+  }
+
+  .anim{
+    transform: translate(200%, -9rem);
   }
 }
 
@@ -118,6 +172,16 @@ h1{
       font-size: .6rem;
     }
   }
+
+  .zepline{
+    width: 150px;
+    height: 150px;
+    transform: translate(-300%, 3rem);
+  }
+
+  .anim{
+    transform: translate(300%, -9rem);
+  }
 }
 
 @media #{$sm}{
@@ -132,6 +196,16 @@ h1{
   #text-home{
     width: 400px;
     margin-bottom: 10rem;
+  }
+
+  .zepline{
+    width: 100px;
+    height: 100px;
+    transform: translate(-320%, -3rem);
+  }
+
+  .anim{
+    transform: translate(320%, -9rem);
   }
 }
 
@@ -153,6 +227,11 @@ h1{
     span{
       margin-top: .5rem;
     }
+  }
+
+  .zepline{
+    width: 75px;
+    height: 75px;
   }
 }
 

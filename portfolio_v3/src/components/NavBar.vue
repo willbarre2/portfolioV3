@@ -203,8 +203,7 @@ export default{
     width: 100%;
     position: absolute;
     z-index: 100;
-    background-color: $skyT;
-    backdrop-filter: blur(5px);
+    background-color: $sky;
     flex-direction: column;
     transition: transform 1s ease-in-out;
     -webkit-transition: transform 0.6s ease-in-out;

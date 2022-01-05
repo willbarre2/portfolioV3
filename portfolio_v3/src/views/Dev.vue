@@ -24,10 +24,10 @@ export default {
     return {
       data: [
         '<div id="PLM"></div><fa :icon="[\'fas\', \'mouse-pointer\']"/><div class="circle-info"><h2>Portail des services Numériques Mathrice</h2><p>Porjet réalisé pour l\'Institut de Mathématique de Bordeaux (CNRS).<br> Portail permettant d\'accéder aux différents services de la Plateforme en Ligne pour les Mathématiques (web conférences, espaces de stockage et de partage de fichiers, éditions en ligne, messageries instantanées, …).<br> Il permet aussi la gestion de son compte par l\'intermédiaire d\'une page d\'édition de profil, une modale et une page de réinitialisation de mot de passe.<br> Une interface permet d\'inviter une personne à pouvoir utiliser les services, lui créer un compte.<br> Enfin une interface permet de gérer les unités/laboratoires, ainsi que les comptes qui lui sont rattachés.<br>Ce projet nécessite un mockup d\'API pour tourner en local.</p><h3>Technos :</h3><div class="logos-technos"><fa class="vuejs-logo" title="Vue.JS 3" :icon="[\'fab\', \'vuejs\']"/><fa class="sass-logo" :icon="[\'fab\', \'sass\']"/><fa class="nodejs-logo" :icon="[\'fab\', \'node\']"/></div><div class="btns-devweb"><a class="btn" href="https://vuejs-debug-plm-services.apps.math.cnrs.fr/">Voir le site</a><a class="btn" href="https://github.com/willbarre2/PLMServiciesVue">Github Front</a><a class="btn" href="https://github.com/willbarre2/PLMServicesMockUp">Github Mock Up</a></div></div>',
-        '<div id="OnlineBIO"></div><div class="circle-info"><fa :icon="[\'fas\', \'mouse-pointer\']"/><h2>Online BIO</h2><p>1ère place au hackathon du 19 au 22 avril 2021, organisé par le campus du lac (CCI Gironde).<br>Il fallait faire le site vitrine d\'un primeur bio. J\'étais chef de projet et Git master.</p><h3>Technos :</h3><div class="logos-technos"><fa class="html-logo" :icon="[\'fab\', \'html5\']"/><fa class="css-logo" :icon="[\'fab\', \'css3-alt\']"/><fa class="js-logo" :icon="[\'fab\', \'js-square\']"/></div><div class="btns-devweb"><a class="btn" href="https://willbarre2.github.io/hackathon/">Voir le site</a><a class="btn" href="https://github.com/willbarre2/hackathon">Github</a></div></div>',
-        '<div id="MyCave"></div><div class="circle-info"><fa :icon="[\'fas\', \'mouse-pointer\']"/><h2>My Cave</h2><p>Application de gestion de cave à vin en ligne.<br> Projet réalisé en cours de formation.<br><br>Identifiant : admin<br>Mot de passe : AdminAdmin22</p><h3>Technos :</h3><div class="logos-technos"><fa class="php-logo" :icon="[\'fab\', \'php\']"/><fa class="sass-logo" :icon="[\'fab\', \'sass\']"/><fa class="nodejs-logo" :icon="[\'fab\', \'node\']"/></div><div class="btns-devweb"><a class="btn" href="https://mycavewb.com/index.php">Voir le site</a><a class="btn" href="https://github.com/willbarre2/myCave">Github</a></div></div>',
-        '<div id="Archlabs"></div><div class="circle-info"><fa :icon="[\'fas\', \'mouse-pointer\']"/><h2>ARCLABS</h2><p>Mise en Pratique de Bootstrap à partir d\'une maquette fournis.</p><h3>Technos :</h3><div class="logos-technos"><fa class="bootstrap-logo" :icon="[\'fab\', \'bootstrap\']"/><fa class="html-logo" :icon="[\'fab\', \'html5\']"/><fa class="css-logo" :icon="[\'fab\', \'css3-alt\']"/></div><div class="btns-devweb"><a class="btn" href="https://willbarre2.github.io/archFuture/">Voir le site</a><a class="btn" href="https://github.com/willbarre2/archFuture">Github</a></div></div>',
-        '<div id="Tinker"></div><div class="circle-info"><fa :icon="[\'fas\', \'mouse-pointer\']"/><h2>TINKER</h2><p>Mise en Pratique de Bootstrap et Sass à partir d\'une maquette fournis.</p><h3>Technos :</h3><div class="logos-technos"><fa class="bootstrap-logo" :icon="[\'fab\', \'bootstrap\']"/><fa class="html-logo" :icon="[\'fab\', \'html5\']"/><fa class="sass-logo" :icon="[\'fab\', \'sass\']"/></div><div class="btns-devweb"><a class="btn" href="https://willbarre2.github.io/Tinker/">Voir le site</a><a class="btn" href="https://github.com/willbarre2/Tinker">Github</a></div></div>',
+        '<div id="OnlineBIO"></div><fa :icon="[\'fas\', \'mouse-pointer\']"/><div class="circle-info"><h2>Online BIO</h2><p>1ère place au hackathon du 19 au 22 avril 2021, organisé par le campus du lac (CCI Gironde).<br>Il fallait faire le site vitrine d\'un primeur bio. J\'étais chef de projet et Git master.</p><h3>Technos :</h3><div class="logos-technos"><fa class="html-logo" :icon="[\'fab\', \'html5\']"/><fa class="css-logo" :icon="[\'fab\', \'css3-alt\']"/><fa class="js-logo" :icon="[\'fab\', \'js-square\']"/></div><div class="btns-devweb"><a class="btn" href="https://willbarre2.github.io/hackathon/">Voir le site</a><a class="btn" href="https://github.com/willbarre2/hackathon">Github</a></div></div>',
+        '<div id="MyCave"></div><fa :icon="[\'fas\', \'mouse-pointer\']"/><div class="circle-info"><h2>My Cave</h2><p>Application de gestion de cave à vin en ligne.<br> Projet réalisé en cours de formation.<br><br>Identifiant : admin<br>Mot de passe : AdminAdmin22</p><h3>Technos :</h3><div class="logos-technos"><fa class="php-logo" :icon="[\'fab\', \'php\']"/><fa class="sass-logo" :icon="[\'fab\', \'sass\']"/><fa class="nodejs-logo" :icon="[\'fab\', \'node\']"/></div><div class="btns-devweb"><a class="btn" href="https://mycavewb.com/index.php">Voir le site</a><a class="btn" href="https://github.com/willbarre2/myCave">Github</a></div></div>',
+        '<div id="Archlabs"></div><fa :icon="[\'fas\', \'mouse-pointer\']"/><div class="circle-info"><h2>ARCLABS</h2><p>Mise en Pratique de Bootstrap à partir d\'une maquette fournis.</p><h3>Technos :</h3><div class="logos-technos"><fa class="bootstrap-logo" :icon="[\'fab\', \'bootstrap\']"/><fa class="html-logo" :icon="[\'fab\', \'html5\']"/><fa class="css-logo" :icon="[\'fab\', \'css3-alt\']"/></div><div class="btns-devweb"><a class="btn" href="https://willbarre2.github.io/archFuture/">Voir le site</a><a class="btn" href="https://github.com/willbarre2/archFuture">Github</a></div></div>',
+        '<div id="Tinker"></div><fa :icon="[\'fas\', \'mouse-pointer\']"/><div class="circle-info"><h2>TINKER</h2><p>Mise en Pratique de Bootstrap et Sass à partir d\'une maquette fournis.</p><h3>Technos :</h3><div class="logos-technos"><fa class="bootstrap-logo" :icon="[\'fab\', \'bootstrap\']"/><fa class="html-logo" :icon="[\'fab\', \'html5\']"/><fa class="sass-logo" :icon="[\'fab\', \'sass\']"/></div><div class="btns-devweb"><a class="btn" href="https://willbarre2.github.io/Tinker/">Voir le site</a><a class="btn" href="https://github.com/willbarre2/Tinker">Github</a></div></div>',
       ],
     };
   },
@@ -281,9 +281,8 @@ export default {
 
       #slider{
         svg{
-          font-size: 1.5rem;
           top: 8.3%;
-          left: 89.6%;
+          left: 89.4%;
         }
         .circle-info{
           clip-path: circle(30px at 90% 10%);
@@ -366,9 +365,9 @@ export default {
         }
 
         svg{
-          font-size: 1.2rem;
-          top: 8.9%;
-          left: 84.7%;
+          font-size: 2rem;
+          top: 7.9%;
+          left: 83.8%;
         }
         .circle-info{
           clip-path: circle(25px at 85% 10%);
@@ -434,20 +433,20 @@ export default {
         }
 
         .vue-carousel--controls>.vue-carousel__control--prev{
-        transform: translateX(-60%);
-      }
+          transform: translateX(-60%);
+        }
 
-      .vue-carousel--controls>.vue-carousel__control--next{
-        transform: translateX(60%);
-      }
+        .vue-carousel--controls>.vue-carousel__control--next{
+          transform: translateX(60%);
+        }
 
         svg{
-          font-size: 1.2rem;
-          top: 8.7%;
-          left: 84.5%;
+          font-size: 1.8rem;
+          top: 5.3%;
+          left: 89.5%;
         }
         .circle-info{
-          clip-path: circle(25px at 85% 10%);
+          clip-path: circle(25px at 91% 8%);
           h2{
             font-size: 1.5rem;
             margin: 0 2rem;
@@ -487,6 +486,7 @@ export default {
 @media #{$xs}{
   #wrapper-dev{
     #cont-dev{
+      height: 85%;
       #slider{
 
         #PLM{
@@ -514,8 +514,7 @@ export default {
         }
 
         svg{
-          top: 8.5%;
-          left: 83.7%;
+          left: 89.4%;
         }
         .circle-info{
           h2{
@@ -559,7 +558,13 @@ export default {
   #wrapper-dev{
     #cont-dev{
       #slider{
+        svg{
+          top: 4.3%;
+          left: 88.5%;
+        }
+
         .circle-info{
+          clip-path: circle(20px at 91% 8%);
           h2{
             font-size: 1.2rem;
             margin: 0 .5rem;

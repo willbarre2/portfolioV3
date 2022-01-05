@@ -30,6 +30,7 @@ export default {
 #home-cont{
   width: 100%;
   height: 87vh;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: center;
