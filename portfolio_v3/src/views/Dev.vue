@@ -9,12 +9,12 @@
             <fa :icon="['fas', 'mouse-pointer']"/>
             <div class="circle-info">
               <h2>Portail des services Numériques Mathrice</h2>
-              <p>Projet réalisé pour l\'Institut de Mathématique de Bordeaux (CNRS).
-              <br> Portail permettant d\'accéder aux différents services de la Plateforme en Ligne pour les Mathématiques (web conférences, espaces de stockage et de partage de fichiers, éditions en ligne, messageries instantanées, …).
-              <br> Il permet aussi la gestion de son compte par l\'intermédiaire d\'une page d\'édition de profil, une modale et une page de réinitialisation de mot de passe.
+              <p>Projet réalisé pour l'Institut de Mathématique de Bordeaux (CNRS).
+              <br> Portail permettant d'accéder aux différents services de la Plateforme en Ligne pour les Mathématiques (web conférences, espaces de stockage et de partage de fichiers, éditions en ligne, messageries instantanées, …).
+              <br> Il permet aussi la gestion de son compte par l'intermédiaire d'une page d'édition de profil, une modale et une page de réinitialisation de mot de passe.
               <br> Une interface permet d\'inviter une personne à pouvoir utiliser les services, lui créer un compte.
               <br> Enfin une interface permet de gérer les unités/laboratoires, ainsi que les comptes qui lui sont rattachés.
-              <br>Ce projet nécessite un mockup d\'API pour tourner en local.</p>
+              <br>Ce projet nécessite un mockup d'API pour tourner en local.</p>
               <h3>Technos :</h3>
               <div class="logos-technos">
                 <fa class="vuejs-logo" title="Vue.JS 3" :icon="['fab', 'vuejs']"/>
@@ -34,7 +34,7 @@
             <div class="circle-info">
               <h2>Online BIO</h2>
               <p>1ère place au hackathon du 19 au 22 avril 2021, organisé par le campus du lac (CCI Gironde).
-              <br>Il fallait faire le site vitrine d\'un primeur bio. J\'étais chef de projet et Git master.
+              <br>Il fallait faire le site vitrine d'un primeur bio. J'étais chef de projet et Git master.
               </p>
               <h3>Technos :</h3>
               <div class="logos-technos">
@@ -74,7 +74,7 @@
             <fa :icon="['fas', 'mouse-pointer']"/>
             <div class="circle-info">
               <h2>ARCLABS</h2>
-              <p>Mise en Pratique de Bootstrap à partir d\'une maquette fournis.</p>
+              <p>Mise en Pratique de Bootstrap à partir d'une maquette fournis.</p>
               <h3>Technos :</h3>
               <div class="logos-technos">
                 <fa class="bootstrap-logo" :icon="['fab', 'bootstrap']"/>
@@ -92,7 +92,7 @@
             <fa :icon="['fas', 'mouse-pointer']"/>
             <div class="circle-info">
               <h2>TINKER</h2>
-              <p>Mise en Pratique de Bootstrap et Sass à partir d\'une maquette fournis.</p>
+              <p>Mise en Pratique de Bootstrap et Sass à partir d'une maquette fournis.</p>
               <h3>Technos :</h3>
               <div class="logos-technos">
                 <fa class="bootstrap-logo" :icon="['fab', 'bootstrap']"/>
@@ -133,14 +133,6 @@ export default {
     Title,
     Swiper,
     SwiperSlide,
-  },
-  data() {
-    return {
-      data: [
-        
-        '<div id="Tinker"></div><fa :icon="[\'fas\', \'mouse-pointer\']"/><div class="circle-info"><h2>TINKER</h2><p>Mise en Pratique de Bootstrap et Sass à partir d\'une maquette fournis.</p><h3>Technos :</h3><div class="logos-technos"><fa class="bootstrap-logo" :icon="[\'fab\', \'bootstrap\']"/><fa class="html-logo" :icon="[\'fab\', \'html5\']"/><fa class="sass-logo" :icon="[\'fab\', \'sass\']"/></div><div class="btns-devweb"><a class="btn" href="https://willbarre2.github.io/Tinker/">Voir le site</a><a class="btn" href="https://github.com/willbarre2/Tinker">Github</a></div></div>',
-      ],
-    };
   },
   mounted(){
     const navBar = document.getElementById("nav")
