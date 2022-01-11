@@ -45,8 +45,8 @@ export default {
 
 #cont-CV{
   width: 600px;
-  height: 800px;
-  margin:  0 auto;
+  height: 775px;
+  margin:  0 auto 1rem;
   @extend %shadowL;
   @extend %glass;
   display: flex;

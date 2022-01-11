@@ -139,8 +139,8 @@ export default {
 
 #cont-form-contact{
   width: 800px;
-  height: 800px;
-  margin:  0 auto;
+  height: 775px;
+  margin:  0 auto 1rem;
   @extend %shadowL;
   @extend %glass;
   position: absolute;
