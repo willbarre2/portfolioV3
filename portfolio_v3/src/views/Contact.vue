@@ -3,29 +3,29 @@
     <Title />
     <div id="cont-form-contact">
       <div>
-        <label>Nom:</label>
         <input id="lastname" type="text" name="nom" :class="{ inputerror : !lastNameIsValid }" v-model="form.lastname">
+        <label :class="{ labelok : lastNameIsValid }">Nom:</label>
       </div>
 
       <div>
-        <label>Prénom:</label>
         <input id="firstname" type="text" name="prenom" :class="{ inputerror : !firstNameIsValid }" v-model="form.firstname">
+        <label :class="{ labelok : firstNameIsValid }">Prénom:</label>
       </div>
 
       <div>
-        <label>E-mail:</label>
-        <input id="email" type="text" name="mail" :class="{ inputerror : !mailIsSet }" v-model="form.mail">
+        <input id="email" type="text" name="mail" :class="{ inputerror : !mailIsValid }" v-model="form.mail">
+        <label :class="{ labelok : mailIsValid }">E-mail:</label>
         <span id="info-mail" :class="{ errormsg : !mailIsValid }" >l'E-mail doit avoir la forme: abcde@exemple.fg</span>
       </div>
 
       <div>
-        <label>Sujet:</label>
         <input id="sujet" type="text" name="sujet" :class="{ inputerror : !subjectIsValid }" v-model="form.subject">
+        <label :class="{ labelok : subjectIsValid }">Sujet:</label>
       </div>
 
       <div>
-        <label>Message:</label>
         <textarea id="message" type="text" name="msg" v-model="form.msg" :class="{ inputerror : !msgIsValid }"></textarea>
+        <label :class="{ labelok : msgIsValid }">Message:</label>
       </div>
 
       <button :disabled="!formIsValid" type="submit" name="send" @click="submitMsg">Envoyer</button>
@@ -74,10 +74,6 @@ export default {
 
     firstNameIsValid(){
       return !!this.form.firstname
-    },
-
-    mailIsSet(){
-      return !!this.form.mail
     },
     
     mailIsValid(){
@@ -157,16 +153,32 @@ export default {
     label{
       font-family: "Jose", Avenir, Helvetica, Arial, sans-serif;
       font-size: 1.3rem;
-      color: $blueCD; 
+      color: $red; 
+      position: absolute;
+      transform: translate(.5rem, 0);
+      z-index: -1;
+    }
+
+    textarea + label{
+      transform: translate(.5rem, .5rem);
+    }
+
+    input:focus + label{
+      transform: translateY(-30px);
+      font-size: .8rem;
+      transition: all 0.5s ease;
+    }
+
+    textarea:focus + label{
+      transform: translateY(-20px);
+      font-size: .8rem;
+      transition: all 0.5s ease;
     }
   
     input, textarea{
       @extend %inputs;
-      width: 400px;
+      width: 100%;
       color: $blueCD;
-    }
-    input.inputerror:focus { 
-        outline-color: $red;   
     }
 
     span{
@@ -215,16 +227,6 @@ export default {
   #cont-form-contact{
     width: 600px;
     height: 800px;
-
-    div{
-      input, textarea{
-        width: 300px;
-      }
-
-      span{
-        transform: translate(8.5rem, 1.8rem);
-      }
-    }
   }
 }
 
@@ -256,14 +258,27 @@ export default {
     }
 
     div{
-      input, textarea{
-        width: 230px;
-        font-size: 1rem;
-      }
       span{
-        transform: translate(6.1rem, 1.45rem);
+        transform: translate(8rem, 1.45rem);
       }
+      .errormsg{
+      font-size: .7rem;
     }
+    }
+
+    input:focus + label{
+      transform: translateY(-25px) !important;
+      font-size: .7rem !important;
+      transition: all 0.5s ease;
+    }
+
+    textarea:focus + label{
+      transform: translateY(-10px) !important;
+      font-size: .7rem !important;
+      transition: all 0.5s ease;
+    }
+
+    
 
     button{
       font-size: 1rem;
@@ -285,26 +300,18 @@ export default {
     height: 450px;
 
     div{
-      flex-direction: column;
-      input, textarea{
-        width: 80%;
-      }
 
       textarea{
         height: 75px
       }
 
       span{
-        transform: translate(0, 3.2rem);
+        transform: translate(3rem, 1.5rem);
       }
     }
 
     div:nth-child(4){
       margin-top: .5rem;
-    }
-
-    div:nth-child(5){
-      align-items: center;
     }
 
     button{
@@ -327,7 +334,7 @@ export default {
     height: 400px;
     div{
       span{
-        font-size: .7rem !important;
+        font-size: .6rem !important;
       }
     }
   }

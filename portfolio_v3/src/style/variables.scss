@@ -37,7 +37,7 @@ $roseC: #fdc1a9;
 $roseCD: #f1928e;
 $purpleC: #674d7d;
 $green: #42b983;
-$red: #c71515;
+$red: #8d0101;
 $redL: #da3737;
 
 $border-blue: #57b9e0 #164c61 #164c61  #57b9e0;
@@ -104,18 +104,17 @@ $scale: scale(1.1);
 }
 
 %inputs{
-    border: 1px solid $blueCD;
-    background-color: rgba(255, 255, 255, 0.247);
+    border: 0;
+    border-bottom: 2px solid $blueCD;
     font-family: "Jose", Avenir, Helvetica, Arial, sans-serif;
     font-size: 1.3rem;
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
     padding: 0.5rem 1rem;
-    &::placeholder{
-        color: rgb(156, 156, 156); 
+    outline: none;
+    transition: all 0.2s ease-in;
+    background-color: rgba(255, 255, 255, 0.1) !important;
+
+    &:valid{
+        background-color: rgba(255, 255, 255, 0.1) !important;
     }
 }
 
@@ -217,5 +216,17 @@ $scale: scale(1.1);
 }
 
 .inputerror{
-    border: 1px solid $red !important;
+    border: 0;
+    border-bottom: 2px solid $red !important;
+}
+
+.labelok{
+    color: $blueCD !important;
+    transform: translateY(-30px) !important;
+    font-size: .8rem !important;
+    transition: all 0.5s ease;
+    -webkit-transform: translateY(-30px) !important;
+    -moz-transform: translateY(-30px) !important;
+    -ms-transform: translateY(-30px) !important;
+    -o-transform: translateY(-30px) !important;
 }
