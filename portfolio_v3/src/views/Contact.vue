@@ -15,7 +15,7 @@
       <div>
         <input id="email" type="text" name="mail" :class="{ inputerror : !mailIsValid }" v-model="form.mail">
         <label :class="{ labelok : mailIsValid }">E-mail:</label>
-        <span id="info-mail" :class="{ errormsg : !mailIsValid }" >l'E-mail doit avoir la forme: abcde@exemple.fg</span>
+        <span id="info-mail" :class="{ errormsg : !mailIsValid }" >l'E-mail doit avoir la forme: abcde@exemple.com</span>
       </div>
 
       <div>

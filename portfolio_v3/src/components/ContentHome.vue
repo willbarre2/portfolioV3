@@ -16,7 +16,10 @@ export default {
 
     setTimeout(() => {
       zepline.classList.add("anim");
-    }, 200)
+      setInterval(() =>{
+        zepline.classList.toggle("anim");
+      }, 32000)
+    }, 5)
     
   }
 }
@@ -68,11 +71,11 @@ h1{
   width: 300px;
   height: 300px;
   transform: translate(-370%, 3rem);
-  transition: all 20s linear;
-  -webkit-transition: all 20s linear;
-  -moz-transition: all 20s linear;
-  -ms-transition: all 20s linear;
-  -o-transition: all 20s linear;
+  transition: all 30s linear;
+  -webkit-transition: all 30s linear;
+  -moz-transition: all 30s linear;
+  -ms-transition: all 30s linear;
+  -o-transition: all 30s linear;
 }
 
 .anim{

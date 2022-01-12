@@ -4,6 +4,7 @@
     <div id="cont-dev">
       <div id="slider">
         <swiper :slides-per-view="1" :loop="true" :pagination='{ "clickable": true }' :navigation="true" class="mySwiper">
+          <!-- PLM -->
           <swiper-slide>
             <div id="PLM"></div>
             <fa :icon="['fas', 'mouse-pointer']"/>
@@ -12,9 +13,9 @@
               <p>Projet réalisé pour l'Institut de Mathématique de Bordeaux (CNRS).
               <br> Portail permettant d'accéder aux différents services de la Plateforme en Ligne pour les Mathématiques (web conférences, espaces de stockage et de partage de fichiers, éditions en ligne, messageries instantanées, …).
               <br> Il permet aussi la gestion de son compte par l'intermédiaire d'une page d'édition de profil, une modale et une page de réinitialisation de mot de passe.
-              <br> Une interface permet d\'inviter une personne à pouvoir utiliser les services, lui créer un compte.
+              <br> Une interface permet d'inviter une personne à pouvoir utiliser les services, lui créer un compte.
               <br> Enfin une interface permet de gérer les unités/laboratoires, ainsi que les comptes qui lui sont rattachés.
-              <br>Ce projet nécessite un mockup d'API pour tourner en local.</p>
+              <br>Ce projet nécessite un mock-up d'API pour tourner en local.</p>
               <h3>Technos :</h3>
               <div class="logos-technos">
                 <fa class="vuejs-logo" title="Vue.JS 3" :icon="['fab', 'vuejs']"/>
@@ -24,10 +25,13 @@
               <div class="btns-devweb">
                 <a class="btn" href="https://vuejs-debug-plm-services.apps.math.cnrs.fr/">Voir le site</a>
                 <a class="btn" href="https://github.com/willbarre2/PLMServiciesVue">Github Front</a>
-                <a class="btn" href="https://github.com/willbarre2/PLMServicesMockUp">Github Mock Up</a>
+                <a class="btn" href="https://github.com/willbarre2/PLMServicesMockUp">Github Mock-Up</a>
               </div>
             </div>
+          
+          
           </swiper-slide>
+          <!-- Online Bio -->
           <swiper-slide>
             <div id="OnlineBIO"></div>
             <fa :icon="['fas', 'mouse-pointer']"/>
@@ -47,19 +51,23 @@
                 <a class="btn" href="https://github.com/willbarre2/hackathon">Github</a>
               </div>
             </div>
+          
           </swiper-slide>
+          <!-- My Cave -->
           <swiper-slide>
             <div id="MyCave"></div>
             <fa :icon="['fas', 'mouse-pointer']"/>
             <div class="circle-info">
               <h2>My Cave</h2>
               <p>Application de gestion de cave à vin en ligne.
-              <br> Projet réalisé en cours de formation.
-              <br><br>Identifiant : admin
+              <br>Projet réalisé en cours de formation.
+              <br>Vous pouvez essayer une version de test de cette application avec le lien ci-dessous et les codes :
+              <br>Identifiant : admin
               <br>Mot de passe : AdminAdmin22</p>
               <h3>Technos :</h3>
               <div class="logos-technos">
                 <fa class="php-logo" :icon="['fab', 'php']"/>
+                <p id="my-sql">My<span>SQL</span></p>
                 <fa class="sass-logo" :icon="['fab', 'sass']"/>
                 <fa class="nodejs-logo" :icon="['fab', 'node']"/>
               </div>
@@ -69,6 +77,7 @@
               </div>
             </div>
           </swiper-slide>
+          <!-- ArchLabs -->
           <swiper-slide>
             <div id="Archlabs"></div>
             <fa :icon="['fas', 'mouse-pointer']"/>
@@ -87,6 +96,7 @@
               </div>
             </div>
           </swiper-slide>
+          <!-- Tinker -->
           <swiper-slide>
             <div id="Tinker"></div>
             <fa :icon="['fas', 'mouse-pointer']"/>
@@ -284,35 +294,47 @@ export default {
           h2{
             color: $blueCD;
             font-family: "FeelGoodB", Avenir, Helvetica, Arial, sans-serif;
-            font-size: 3rem;
-            margin: 0 4rem 1rem;
+            font-size: 2.5rem;
+            margin: 0 4rem .5rem;
           }
   
           p{
             color: $blueC;
             font-family: "Jose", Avenir, Helvetica, Arial, sans-serif;
-            font-size: 1.2rem;
-            line-height: 1.5rem;
-            margin: 0 5rem 1rem;
+            font-size: 1rem;
+            line-height: 1.35rem;
+            margin: 0 5rem;
           }
   
           h3{
             color: $blueCD;
             font-family: "FeelGoodB", Avenir, Helvetica, Arial, sans-serif;
             font-size: 2rem;
-            margin: 2rem 4rem 1rem;
+            margin: 1rem 4rem;
           }
   
           .logos-technos{
             width: 100%;
-            height: 100px;
+            height: 75px;
             display: flex;
             justify-content: space-evenly;
             align-items: center;
             svg{
               position: static;
-              font-size: 5rem;
+              font-size: 4rem;
             }
+
+            #my-sql{
+              text-shadow: 1px 1px 3px $blackT;
+              margin: 0;
+              color: $blueC;
+              font-family: "FeelGoodB", Avenir, Helvetica, Arial, sans-serif;
+              font-size: 3rem;
+              span{
+                color: rgb(255, 115, 0);
+              }
+            }
+
             .vuejs-logo{
               color: #41b883;
             }
@@ -338,7 +360,7 @@ export default {
             }
   
             .php-logo{
-              color: #828cb7;
+              color: #6470a5;
             }
   
             .bootstrap-logo{
@@ -352,7 +374,7 @@ export default {
             display: flex;
             justify-content: space-evenly;
             align-items: center;
-            margin: 2rem 0;
+            margin: 1rem 0;
   
             .btn{
               margin: 0;
@@ -420,9 +442,6 @@ export default {
           }
           .circle-info{
             clip-path: circle(30px at 90% 10%);
-            h2{
-              font-size: 2.5rem;
-            }
   
             p{
               font-size: 1rem;
@@ -435,9 +454,6 @@ export default {
   
             .logos-technos{
               height: 50px;
-              svg{
-                font-size: 4rem;
-              }
             }
   
             .btns-devweb{
@@ -526,6 +542,10 @@ export default {
               svg{
                 font-size: 3rem;
               }
+
+              #my-sql{
+                font-size: 2rem;
+              }
             }
   
             .btns-devweb{
@@ -595,6 +615,10 @@ export default {
               svg{
                 font-size: 2.5rem;
               }
+
+              #my-sql{
+                font-size: 1.5rem;
+              }
             }
   
             .btns-devweb{
@@ -661,6 +685,10 @@ export default {
               svg{
                 font-size: 2rem;
               }
+
+              #my-sql{
+                font-size: 1.2rem;
+              }
             }
   
             .btns-devweb{
@@ -715,6 +743,10 @@ export default {
               height: 20px;
               svg{
                 font-size: 1.5rem;
+              }
+
+              #my-sql{
+                font-size: 1rem;
               }
             }
   
