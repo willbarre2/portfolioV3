@@ -53,6 +53,7 @@ $xs: "only screen and (max-width: 425px)";
 $xxs: "only screen and (max-width: 320px)";
 
 $animate: all 0.2s ease-in-out;
+$slow-animate: all 1s ease-in-out;
 $scale: scale(1.1);
 
 %animate{
@@ -61,6 +62,14 @@ $scale: scale(1.1);
     -moz-transition: $animate;
     -ms-transition: $animate;
     -o-transition: $animate;
+}
+
+%slow-animate{
+    transition: $slow-animate;
+    -webkit-transition: $slow-animate;
+    -moz-transition: $slow-animate;
+    -ms-transition: $slow-animate;
+    -o-transition: $slow-animate;
 }
 
 %shadow{

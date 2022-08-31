@@ -4,10 +4,33 @@
     <div id="cont-dev">
       <div id="slider">
         <swiper :slides-per-view="1" :loop="true" :pagination='{ "clickable": true }' :navigation="true" class="mySwiper">
+          <!-- Tolteck -->
+          <swiper-slide>
+            <div id="Tolteck"></div>
+            <fa :icon="['fas', 'mouse-pointer']" class="pointer"/>
+            <div class="circle-info">
+              <h2>Tolteck PWA</h2>
+              <p>Progressive Web App de devis-factures pour les artisans.
+              <br> Application permettant la réalisation de documents professionnels, rapidement et simplement, sur tout type de supports (PC, tablette, smartphone). Les documents sont consultables et éditables par plusieurs personnes, même sans connexion, grâce à des bases de données synchronisées (CouchDB).
+              <br> Des bases de clients, de matériaux et d'ouvrages peuvent être constitués. Des matériaux et leurs prix peuvent être importés de sites partenaires (PointP.fr, Solu+,...).
+              <br>
+              <br>J'ai réalisé de nouvelles fonctionnalités : changement de langue, imports depuis sites partenaires, exports en .xlsx des bases clients, redirection si app ouverte dans iframe ou WebView, ... Ainsi que les tests unitaires et end2end afférents.</p>
+              <h3>Technos :</h3>
+              <div class="logos-technos">
+                <fa class="angular-logo" title="Vue.JS 3" :icon="['fab', 'angular']"/>
+                <fa class="bootstrap-logo" :icon="['fab', 'bootstrap']"/>
+                <fa class="python-logo" :icon="['fab', 'python']"/>
+                <fa class="couch-logo" :icon="['fa', 'couch']"/>
+              </div>
+              <div class="btns-devweb">
+                <a class="btn" href="https://www.tolteck.com/fr-fr/">Voir le site commercial</a>
+              </div>
+            </div>
+          </swiper-slide>
           <!-- PLM -->
           <swiper-slide>
             <div id="PLM"></div>
-            <fa :icon="['fas', 'mouse-pointer']"/>
+            <fa :icon="['fas', 'mouse-pointer']" class="pointer"/>
             <div class="circle-info">
               <h2>Portail des services Numériques Mathrice</h2>
               <p>Projet réalisé pour l'Institut de Mathématique de Bordeaux (CNRS).
@@ -28,13 +51,11 @@
                 <a class="btn" href="https://github.com/willbarre2/PLMServicesMockUp">Github Mock-Up</a>
               </div>
             </div>
-          
-          
           </swiper-slide>
           <!-- Online Bio -->
           <swiper-slide>
             <div id="OnlineBIO"></div>
-            <fa :icon="['fas', 'mouse-pointer']"/>
+            <fa :icon="['fas', 'mouse-pointer']" class="pointer"/>
             <div class="circle-info">
               <h2>Online BIO</h2>
               <p>1ère place au hackathon du 19 au 22 avril 2021, organisé par le campus du lac (CCI Gironde).
@@ -51,12 +72,11 @@
                 <a class="btn" href="https://github.com/willbarre2/hackathon">Github</a>
               </div>
             </div>
-          
           </swiper-slide>
           <!-- My Cave -->
           <swiper-slide>
             <div id="MyCave"></div>
-            <fa :icon="['fas', 'mouse-pointer']"/>
+            <fa :icon="['fas', 'mouse-pointer']" class="pointer"/>
             <div class="circle-info">
               <h2>My Cave</h2>
               <p>Application de gestion de cave à vin en ligne.
@@ -80,7 +100,7 @@
           <!-- ArchLabs -->
           <swiper-slide>
             <div id="Archlabs"></div>
-            <fa :icon="['fas', 'mouse-pointer']"/>
+            <fa :icon="['fas', 'mouse-pointer']" class="pointer"/>
             <div class="circle-info">
               <h2>ARCLABS</h2>
               <p>Mise en Pratique de Bootstrap à partir d'une maquette fournis.</p>
@@ -99,7 +119,7 @@
           <!-- Tinker -->
           <swiper-slide>
             <div id="Tinker"></div>
-            <fa :icon="['fas', 'mouse-pointer']"/>
+            <fa :icon="['fas', 'mouse-pointer']" class="pointer"/>
             <div class="circle-info">
               <h2>TINKER</h2>
               <p>Mise en Pratique de Bootstrap et Sass à partir d'une maquette fournis.</p>
@@ -249,16 +269,30 @@ export default {
           background-position: center;
         }
   
-        svg{
+        svg.pointer{
           font-size: 2rem;
           position: absolute;
           z-index: 100;
-          top: 7.5%;
-          left: 94.3%;
+          top: 5.5%;
+          left: 91.3%;
+          
+          padding: .8rem 1.2rem;
+          border-radius: 100%;
+          animation: .5s ease-in-out 0s infinite alternate flash;
+          @extend %animate;
+
+          @keyframes flash{ 
+            from {background-color: $redL;} 
+            to {background-color: $red;}
+          }
+
+          &:hover{
+            color: transparent;
+            background-color: transparent !important;
+          }
   
           &:hover + .circle-info{
             clip-path: circle(150% at 95% 10%);
-            background-color: $sky;
           }
         }
   
@@ -274,22 +308,12 @@ export default {
           -moz-border-radius: 15px;
           -ms-border-radius: 15px;
           -o-border-radius: 15px;
-          background-color: $redL;
-          clip-path: circle(4% at 95% 10%);
-          transition: all 1s ease-in-out;
-          -webkit-transition: all 1s ease-in-out;
-          -moz-transition: all 1s ease-in-out;
-          -ms-transition: all 1s ease-in-out;
-          -o-transition: all 1s ease-in-out;
+          background-color: $sky;
+          clip-path: circle(1% at 95% 10%);
+          @extend %slow-animate;
           display: flex;
           flex-direction: column;
           justify-content: center;
-          
-  
-          &:hover{
-            clip-path: circle(150% at 95% 10%);
-            background-color: $sky;
-          }
   
           h2{
             color: $blueCD;
@@ -322,6 +346,9 @@ export default {
             svg{
               position: static;
               font-size: 4rem;
+              background-color: transparent;
+              padding: 0;
+              border-radius: 0;
             }
 
             #my-sql{
@@ -333,6 +360,18 @@ export default {
               span{
                 color: rgb(255, 115, 0);
               }
+            }
+
+            .angular-logo{
+              color: $redL;
+            }
+
+            .python-logo{
+              color: #376c99;
+            }
+
+            .couch-logo{
+              color: $red;
             }
 
             .vuejs-logo{
@@ -387,40 +426,41 @@ export default {
           }
   
         }
-  
-        #PLM{
+
+        %centered_img{
           height: 100%;
-          background-image: url(../assets/img/dev_web/PLM.png);
           background-repeat: no-repeat;
           background-position: center;
+        }
+  
+        #Tolteck{
+          @extend %centered_img;
+          background-image: url(../assets/img/dev_web/Tolteck.png);
+        }
+
+        #PLM{
+          @extend %centered_img;
+          background-image: url(../assets/img/dev_web/PLM.png);
         }
   
         #MyCave{
-          height: 100%;
+          @extend %centered_img;
           background-image: url(../assets/img/dev_web/MyCave.png);
-          background-repeat: no-repeat;
-          background-position: center;
         }
   
         #OnlineBIO{
-          height: 100%;
+          @extend %centered_img;
           background-image: url(../assets/img/dev_web/Online_BIO.png);
-          background-repeat: no-repeat;
-          background-position: center;
         }
   
         #Archlabs{
-          height: 100%;
+          @extend %centered_img;
           background-image: url(../assets/img/dev_web/ArchWeb.png);
-          background-repeat: no-repeat;
-          background-position: center;
         }
   
         #Tinker{
-          height: 100%;
+          @extend %centered_img;
           background-image: url(../assets/img/dev_web/TinkerWeb.png);
-          background-repeat: no-repeat;
-          background-position: center;
         }
       }
     }
@@ -436,12 +476,12 @@ export default {
 
       #slider{
         .swiper-slide{
-          svg{
-            top: 8.3%;
-            left: 89.4%;
+          svg.pointer{
+            top: 6%;
+            left: 87%;
           }
           .circle-info{
-            clip-path: circle(30px at 90% 10%);
+            clip-path: circle(3px at 90% 10%);
   
             p{
               font-size: 1rem;
@@ -493,6 +533,10 @@ export default {
         }
 
         .swiper-slide{
+          #Tolteck{
+            background-image: url(../assets/img/dev_web/Tolteckmd.png);
+          }
+
           #PLM{
             background-image: url(../assets/img/dev_web/PLMmd.png);
           }
@@ -517,13 +561,13 @@ export default {
             background-image: url(../assets/img/dev_web/TinkerWebmd.png);
           }
   
-          svg{
+          svg.pointer{
             font-size: 2rem;
             top: 7.9%;
             left: 83.8%;
           }
           .circle-info{
-            clip-path: circle(25px at 85% 10%);
+            clip-path: circle(2px at 85% 10%);
             h2{
               font-size: 2rem;
             }
@@ -567,6 +611,10 @@ export default {
       #slider{
 
         .swiper-slide{
+          #Tolteck{
+            background-image: url(../assets/img/dev_web/Toltecksm.png);
+          }
+          
           #PLM{
             background-image: url(../assets/img/dev_web/PLMsm.png);
           }
@@ -587,13 +635,14 @@ export default {
             background-image: url(../assets/img/dev_web/TinkerWebsm.png);
           }
   
-          svg{
+          svg.pointer{
             font-size: 1.8rem;
-            top: 5.3%;
-            left: 89.5%;
+            padding: .6rem 1rem;
+            top: 5%;
+            left: 86%;
           }
           .circle-info{
-            clip-path: circle(25px at 91% 8%);
+            clip-path: circle(2px at 91% 8%);
             h2{
               font-size: 1.5rem;
               margin: 0 2rem;
@@ -643,6 +692,10 @@ export default {
       #slider{
 
         .swiper-slide{
+          #Tolteck{
+            background-image: url(../assets/img/dev_web/Tolteckxs.png);
+          }
+
           #PLM{
             background-image: url(../assets/img/dev_web/PLMxs.png);
           }
@@ -663,8 +716,8 @@ export default {
             background-image: url(../assets/img/dev_web/TinkerWebxs.png);
           }
   
-          svg{
-            left: 89.4%;
+          svg.pointer{
+            left: 80%;
           }
           .circle-info{
             h2{
@@ -716,13 +769,14 @@ export default {
       #slider{
 
         .swiper-slide{
-          svg{
+          svg.pointer{
             top: 4.3%;
-            left: 88.5%;
+            left: 75%;
+            padding: .5rem .9rem;
           }
   
           .circle-info{
-            clip-path: circle(20px at 91% 8%);
+            clip-path: circle(2px at 91% 8%);
             h2{
               font-size: 1.2rem;
               margin: 0 .5rem;
