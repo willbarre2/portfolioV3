@@ -2,8 +2,8 @@
   <div id="wrapper-CV">
     <Title />
     <div id="cont-CV">
-      <a :href="`${publicPath}CV_web3small.pdf`" target="_blank" id="textCV">Téléchargez le ici<fa :icon="['fas', 'file-download']"/></a>
-      <img src="../assets/img/CV_web3.png" alt="CV" id="cv">
+      <a :href="`${publicPath}CV_sep_2022.pdf`" target="_blank" id="textCV">Téléchargez le ici<fa :icon="['fas', 'file-download']"/></a>
+      <img src="../assets/img/CV_sep_2022_small.png" alt="CV" id="cv">
     </div>
   </div>
 </template>
