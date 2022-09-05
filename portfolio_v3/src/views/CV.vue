@@ -78,6 +78,10 @@ export default {
     height: 100%;
     @extend %animate;
     @extend %hoverL;
+
+    &:hover{
+      cursor: zoom-in;
+    }
   }
 }
 
