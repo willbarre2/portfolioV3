@@ -282,8 +282,8 @@ export default {
           @extend %animate;
 
           @keyframes flash{ 
-            from {background-color: $redL;} 
-            to {background-color: $red;}
+            from {background-color: $redL; transform:  scale(1.05);} 
+            to {background-color: $red; transform:  scale(1);}
           }
 
           &:hover{

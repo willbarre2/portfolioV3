@@ -3,7 +3,9 @@
     <Title />
     <div id="cont-CV">
       <a :href="`${publicPath}CV_sep_2022.pdf`" target="_blank" id="textCV">Téléchargez le ici<fa :icon="['fas', 'file-download']"/></a>
-      <img src="../assets/img/CV_sep_2022_small.png" alt="CV" id="cv">
+      <a :href="`${publicPath}CV_sep_2022.pdf`" target="_blank" id="imgCV">
+        <img src="../assets/img/CV_sep_2022_small.png" alt="CV" id="cv">
+      </a>
     </div>
   </div>
 </template>
@@ -68,8 +70,14 @@ export default {
     }
   }
 
-  #cv{
+  #imgCV{
     height: 85%;
+  }
+
+  #cv{
+    height: 100%;
+    @extend %animate;
+    @extend %hoverL;
   }
 }
 
