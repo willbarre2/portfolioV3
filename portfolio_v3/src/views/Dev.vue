@@ -314,6 +314,10 @@ export default {
           display: flex;
           flex-direction: column;
           justify-content: center;
+
+          &:hover{
+            clip-path: circle(150% at 95% 10%);
+          }
   
           h2{
             color: $blueCD;
