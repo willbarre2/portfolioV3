@@ -52,6 +52,28 @@
               </div>
             </div>
           </swiper-slide>
+          <!-- Raccoont -->
+          <swiper-slide>
+            <div id="Raccoont"></div>
+            <fa :icon="['fas', 'mouse-pointer']" class="pointer"/>
+            <div class="circle-info">
+              <h2>Raccoont</h2>
+              <p>Mini réseau social type Twitter.
+              <br>Permet de poster des messages, des photos ou des vidéos hébergées par Youtube.
+              <br>Les posts peuvent être likés, commentés et partagés.
+              <br>On peut s'abonner à d'autres utilisateurs pour suivre leurs publications.</p>
+              <h3>Technos :</h3>
+              <div class="logos-technos">
+                <fa class="react-logo" title="React 17" :icon="['fab', 'react']"/>
+                <fa class="sass-logo" :icon="['fab', 'sass']"/>
+                <fa class="nodejs-logo" :icon="['fab', 'node']"/>
+                <p class="mongo-logo">mongo<span>DB</span></p>
+              </div>
+              <div class="btns-devweb">
+                <a class="btn" href="https://github.com/willbarre2/MongoDBTest">Github</a>
+              </div>
+            </div>
+          </swiper-slide>
           <!-- Online Bio -->
           <swiper-slide>
             <div id="OnlineBIO"></div>
@@ -381,6 +403,10 @@ export default {
             .vuejs-logo{
               color: #41b883;
             }
+
+            .react-logo{
+              color: #3cbce0;
+            }
   
             .sass-logo{
               color: #c76494;
@@ -388,6 +414,18 @@ export default {
   
             .nodejs-logo{
               color: #639a58;
+            }
+
+            .mongo-logo{
+              color: #3a3a3a;
+              font-size: 1.5rem;
+              font-family: Georgia, 'Times New Roman', Times, serif;
+              font-weight: bold;
+              margin: 0;
+
+              span{
+                color: #479e45;
+              }
             }
   
             .html-logo{
@@ -445,6 +483,11 @@ export default {
         #PLM{
           @extend %centered_img;
           background-image: url(../assets/img/dev_web/PLM.png);
+        }
+
+        #Raccoont{
+          @extend %centered_img;
+          background-image: url(../assets/img/dev_web/Raccount.png);
         }
   
         #MyCave{
@@ -544,6 +587,10 @@ export default {
           #PLM{
             background-image: url(../assets/img/dev_web/PLMmd.png);
           }
+
+          #Raccoont{
+          background-image: url(../assets/img/dev_web/Raccountmd.png);
+          }
   
           #MyCave{
   
@@ -591,6 +638,10 @@ export default {
                 font-size: 3rem;
               }
 
+              .mongo-logo{
+                font-size: 1rem;
+              }
+
               #my-sql{
                 font-size: 2rem;
               }
@@ -621,6 +672,10 @@ export default {
           
           #PLM{
             background-image: url(../assets/img/dev_web/PLMsm.png);
+          }
+
+          #Raccoont{
+          background-image: url(../assets/img/dev_web/Raccountsm.png);
           }
   
           #MyCave{
@@ -703,6 +758,10 @@ export default {
           #PLM{
             background-image: url(../assets/img/dev_web/PLMxs.png);
           }
+
+          #Raccoont{
+          background-image: url(../assets/img/dev_web/Raccountxs.png);
+          }
   
           #MyCave{
             background-image: url(../assets/img/dev_web/MyCavexs.png);
@@ -741,6 +800,10 @@ export default {
               height: 20px;
               svg{
                 font-size: 2rem;
+              }
+
+              .mongo-logo{
+                font-size: .8rem;
               }
 
               #my-sql{
